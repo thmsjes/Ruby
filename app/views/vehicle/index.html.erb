@@ -1,0 +1,21 @@
+<h1> All Used cars in process </h1>
+
+<table>
+  <thead>
+   <tr>
+    <th>Stock Number</th>
+    <th>Year</th>
+    <th>Actions</th>
+   <tr>
+  </thead>
+
+  <body>
+  <% @vehicle.each do |vehicle| %>
+   <tr>
+    <td><%= vehicle.stock_number %></td>
+    <td><%= vehicle.year %></td>
+    <td>Place Holder</td>
+   </tr>
+  <% end %>
+  </body>
+</table>
