@@ -13,7 +13,9 @@ class VehicleController < ApplicationController
  end
 
  def create
-
+  @newCar = StockUnits.new(params.require(:vehicle).permit(:stock_number, :year))
+  #render plain: params[:vehicle]
+  @newCar.save
  end
 
 end

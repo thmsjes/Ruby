@@ -1,13 +1,15 @@
 <h1> Create a new vehicle to be serviced</h1>
 
-<%= form_with url: "/new", local: true do |f| %>
-
- <p>
-   <%= f.label :stock_number %>
-   <%= f.text_field :stock_number %>
- </p>
- <p>
-   <%= f.label :Year %>
-   <%= f.text_field :year %>
- </p>
+<%= form_with scope: :vehicle, url: vehicle_index_path, local: true do |f| %>
+  <p>
+    <%= f.label :stock_number %>
+    <%= f.text_field :stock_number %>
+  </p>
+  <p>
+    <%= f.label :Year %>
+    <%= f.text_field :year %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
 <% end %>
