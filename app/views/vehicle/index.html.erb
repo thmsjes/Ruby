@@ -2,20 +2,26 @@
 
 <table>
   <thead>
-   <tr>
-    <th>Stock Number</th>
-    <th>Year</th>
-    <th>Actions</th>
-   <tr>
+    <tr>
+      <th>Stock Number</th>
+      <th>Vin</th>
+      <th>Location</th>
+      <th>Type</th>
+      <th>Status</th>
+      <th>Actions</th>
+    <tr>
   </thead>
 
   <body>
-  <% @vehicle.each do |vehicle| %>
-   <tr>
-    <td><%= vehicle.stock_number %></td>
-    <td><%= vehicle.year %></td>
-    <td>Place Holder</td>
-   </tr>
+  <% @vehicles.each do |vehicle| %>
+    <tr>
+      <td><%= vehicle.stock_number %></td>
+      <td><%= vehicle.vin %></td>
+      <td><%= vehicle.location %></td>
+      <td><%= vehicle.kind %></td>
+      <td><%= vehicle.status %></td>
+      <td>Place Holder</td>
+    </tr>
   <% end %>
   </body>
 </table>

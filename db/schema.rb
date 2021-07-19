@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_14_120313) do
+ActiveRecord::Schema.define(version: 2021_07_18_231824) do
 
   create_table "stock_units", force: :cascade do |t|
     t.string "stock_number"
@@ -19,13 +19,13 @@ ActiveRecord::Schema.define(version: 2021_07_14_120313) do
     t.string "make"
     t.string "model"
     t.integer "mileage"
-    t.string "type"
     t.string "location"
     t.string "purchase_price"
     t.string "recon_budget"
     t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "kind"
   end
 
 end

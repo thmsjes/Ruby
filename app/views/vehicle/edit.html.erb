@@ -1,4 +1,4 @@
-<h1> Create a new vehicle to be serviced</h1>
+<h1> Edit vehicle to be serviced</h1>
 
 <% if @newCar.errors.any? %>
 <h2> The following errors preventing from saving! </h2>
@@ -9,7 +9,13 @@
     <ul>
 <% end %>
 
-<%= form_with scope: :vehicle, url: vehicle_index_path, local: true do |f| %>
+  
+
+
+<%= form_with model: @vehicle do |f| %>
+  <% p @vehicle %>
+  <% p @newCar %>
+  
   <p>
     <%= f.label :stock_number %>
     <%= f.text_field :stock_number %>

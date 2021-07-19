@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   root 'pages#home'
   get 'about', to: 'pages#about'
-  resources :vehicle, only: [:show, :index, :new, :create]
+  resources :vehicle, only: [:show, :index, :new, :create, :edit, :update]
 end
